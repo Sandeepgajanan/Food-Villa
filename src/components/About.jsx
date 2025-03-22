@@ -1,12 +1,12 @@
+import { Link } from "react-router-dom";
+
 const About = () => {
   return (
-    <div className="w-full min-h-fit p-4 max-sm:p-2">
+    <div className="w-full h-fit pt-16 px-4 pb-1 max-sm:p-2">
       <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-8 max-sm:gap-4">
         <div className="bg-zinc-800/80 rounded-2xl p-6 max-sm:p-4 h-full">
           <div className="flex flex-col items-center justify-center text-center space-y-8 max-sm:space-y-6 h-full">
-            <h2 className="text-5xl max-sm:text-3xl text-cyan-400">
-              About Us
-            </h2>
+            <h2 className="text-5xl max-sm:text-3xl text-cyan-400">About Us</h2>
 
             <p className="text-zinc-300 text-2xl max-sm:text-lg ">
               Food Villa is your gateway to delicious local cuisine. We connect
@@ -20,12 +20,15 @@ const About = () => {
                   </p>
                   <i className="ri-heart-fill text-red-500"></i>
                 </div>
-                <button className="group bg-gradient-to-r from-cyan-400 to-purple-500 px-8 max-sm:px-6 py-3 max-sm:py-2 rounded-full text-white font-medium  max-sm:w-full">
+                <Link
+                  to="/"
+                  className="group bg-gradient-to-r from-cyan-400 to-purple-500 px-8 max-sm:px-6 py-3 max-sm:py-2 rounded-full text-white font-medium  max-sm:w-full"
+                >
                   Explore Menu
                   <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
                     <i className="ri-arrow-right-line"></i>
                   </span>
-                </button>
+                </Link>
               </div>
             </div>
           </div>

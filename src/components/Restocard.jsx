@@ -11,7 +11,7 @@ const Restocard = ({ resto }) => {
             className="w-full h-full object-cover object-center"
           />
           <div className="p-2">
-            <h2 className="text-zinc-100 font-bold text-lg mt-2 ">
+            <h2 className="text-zinc-100 font-bold text-lg mt-2  ">
               {resto.info.name}
             </h2>
             <h2 className="text-zinc-100 font-bold text-lg mt-2">

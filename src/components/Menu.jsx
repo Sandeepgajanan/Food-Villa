@@ -4,11 +4,10 @@ import { useParams } from "react-router-dom";
 import useRestoDetails from "../utils/useRestoDetails";
 
 const Menu = () => {
+  const { id } = useParams();
 
-  const {id} = useParams();
+  const { restoData, menuItems } = useRestoDetails(id);
 
-  const {restoData,menuItems}=useRestoDetails(id);
-  
   const { name, totalRatingsString, costForTwoMessage, locality, areaName } =
     restoData || {};
 
@@ -16,8 +15,8 @@ const Menu = () => {
     return <Shim />;
   }
   return (
-    <div className="w-full min-h-screen p-4 ">
-      <div className="w-full flex  h-60    p-2 justify-between rounded-lg bg-zinc-800/80 shadow-md max-sm:flex-col max-sm:h-fit max-sm:gap-4">
+    <div className="w-full min-h-screen pt-16 pb-1 ">
+      <div className="w-full flex  h-60 p-2 justify-between rounded-lg bg-zinc-800/80 shadow-md max-sm:flex-col max-sm:h-fit max-sm:gap-4">
         <div className="w-2/3 max-sm:w-full">
           <h1 className="font-bold text-3xl max-sm:text-2xl text-center rounded-md text-white">
             {name}
@@ -37,7 +36,7 @@ const Menu = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-zinc-950/80 w-72 max-sm:w-full flex items-center justify-center rounded-lg py-1 px-3 text-lg max-sm:text-lg font-bold text-white gap-2 "
+                className="bg-zinc-950/80 w-72 max-sm:w-full flex items-center justify-center rounded-lg py-1 px-3 text-lg max-sm:text-sm font-bold text-white gap-2 "
               >
                 <i className={`${item.icon} text-yellow-400`}></i>
                 {item.text}
@@ -45,7 +44,7 @@ const Menu = () => {
             ))}
           </div>
         </div>
-        <div className=" w-96 max-sm:w-full max-sm:h-48 rounded-md overflow-hidden">
+        <div className=" w-96  max-sm:w-full max-sm:h-48 rounded-md overflow-hidden">
           <img
             src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${restoData.cloudinaryImageId}`}
             alt={name}

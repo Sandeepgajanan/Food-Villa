@@ -50,7 +50,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-full min-h-fit p-4 max-sm:p-2">
+    <div className="w-full min-h-fit pt-16 pb-1 max-sm:p-2">
       <div className="max-w-2xl mx-auto">
         <div className="bg-zinc-800/80 rounded-2xl p-3">
           <div className="flex flex-col space-y-6">

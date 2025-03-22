@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Restocard from "./Restocard";
 import Shimmer from "./Shimmer";
-import { filterData } from "../utils/Helper";
+import { filterData } from "../utils/helper";
 const Restaurants = () => {
   const [allRestaurants, setAllRestaurants] = useState([]);
   const [filtered, setFiltered] = useState([]);
@@ -27,7 +27,7 @@ const Restaurants = () => {
 
   
   return (
-    <div className="w-full min-h-fit px-4 max-sm:px-2">
+    <div className="w-full min-h-fit pt-16 px-4 max-sm:px-2 ">
       <div className="flex w-1/2 m-5 justify-between border-zinc-600 rounded-md overflow-hidden max-sm:w-full max-sm:ml-0">
         <input
           type="text"
